@@ -9805,25 +9805,3 @@ body {
 button, .clickable, summary, .accordion-header, .project-header {
     cursor: pointer !important;
 }
-
-/* 2. [부드러운 움직임] "뾱!" 하고 끊기는 거 고치기 */
-/* 애니메이션 속성을 hover가 아니라 '원래 몸통'에 줘야 갈 때도 올 때도 부드러움 */
-button, 
-.modal-btn, 
-.toolbar-button, 
-.chat-message, 
-.session-item,
-.container,
-.draggable-panel {
-    /* 마우스 뗄 때도 부드럽게 돌아오도록 여기에 transition을 줌 */
-    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-}
-
-/* 마우스 올렸을 때(Hover)는 변형만 시킴 */
-button:hover, 
-.modal-btn:hover, 
-.toolbar-button:hover,
-.chat-message:hover {
-    transform: translateY(-5px) scale(1.03) !important;
-    /* 여기서 transition 줄을 뺐음! */
-}
